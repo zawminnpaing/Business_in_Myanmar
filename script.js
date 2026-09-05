@@ -46,12 +46,10 @@ function buildProductsHTML(data) {
     }
 
     validProducts.forEach((product) => {
-        // Build specifications list cleanly
         let specsHTML = "";
         for(let i=1; i<=5; i++) {
             let specKey = `spec_${i}`;
             if(product[specKey] && product[specKey].trim() !== "") {
-                // Split logic if format is "Grade: FAQ" to make it bold
                 let specParts = product[specKey].split(":");
                 if(specParts.length > 1) {
                     specsHTML += `<li><strong>${specParts[0]}:</strong> <span>${specParts[1]}</span></li>`;
@@ -84,14 +82,8 @@ function buildProductsHTML(data) {
 }
 
 // ==========================================
-// DIRECT CHAT MODAL ROUTING LOGIC
+// DIRECT CHAT MODAL ROUTING LOGIC (For Specific Products)
 // ==========================================
-function openGeneralContactModal() {
-    pendingProductName = "General Sourcing Inquiry";
-    document.getElementById("modal-context-text").innerText = "Connect with Zaw Min Paing directly to discuss sourcing requirements and live pricing.";
-    document.getElementById("inquiry-modal").classList.add("show");
-}
-
 function openProductModal(productName) {
     pendingProductName = productName;
     document.getElementById("modal-context-text").innerText = `Connect directly to request live pricing and availability for: ${productName}.`;
@@ -104,20 +96,14 @@ function closeModal() {
 
 function dispatchMessage(platform) {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
-    let message = "";
-    if(pendingProductName === "General Sourcing Inquiry") {
-        message = `Hello Zaw Min Paing, I am interested in sourcing agricultural commodities from Myanmar. I would like to discuss capabilities and pricing.`;
-    } else {
-        message = `Hello Zaw Min Paing, I would like to request a quote and current availability for: ${pendingProductName}.`;
-    }
-    
+    const message = `Hello Zaw Min Paing, I would like to request a quote and current availability for: ${pendingProductName}.`;
     const encodedText = encodeURIComponent(message);
 
     if (platform === 'whatsapp') {
         window.open(`https://wa.me/${WHATSAPP_VIBER_NUM}?text=${encodedText}`, '_blank');
     } 
     else if (platform === 'telegram') {
+        // Safe cross-platform routing for Telegram
         if (isMobile) window.open(`https://t.me/+${TELEGRAM_NUM}?text=${encodedText}`, '_blank');
         else window.open(`tg://resolve?phone=${TELEGRAM_NUM}&text=${encodedText}`, '_self');
     } 
@@ -131,6 +117,32 @@ function dispatchMessage(platform) {
     }
     
     closeModal();
+}
+
+// ==========================================
+// GENERAL CHAT ROUTING LOGIC (For Direct Contact CTAs)
+// ==========================================
+function dispatchGeneralMessage(platform) {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const message = "Hello Zaw Min Paing, I am interested in sourcing agricultural commodities from Myanmar. I would like to discuss capabilities and pricing.";
+    const encodedText = encodeURIComponent(message);
+
+    if (platform === 'whatsapp') {
+        window.open(`https://wa.me/${WHATSAPP_VIBER_NUM}?text=${encodedText}`, '_blank');
+    } 
+    else if (platform === 'telegram') {
+        // Safe cross-platform routing for Telegram
+        if (isMobile) window.open(`https://t.me/+${TELEGRAM_NUM}?text=${encodedText}`, '_blank');
+        else window.open(`tg://resolve?phone=${TELEGRAM_NUM}&text=${encodedText}`, '_self');
+    } 
+    else if (platform === 'viber') {
+        if (isMobile) window.open(`viber://chat?number=%2B${WHATSAPP_VIBER_NUM}&draft=${encodedText}`, '_blank');
+        else window.open(`viber://chat?number=%2B${WHATSAPP_VIBER_NUM}&draft=${encodedText}`, '_self');
+    }
+    else if (platform === 'email') {
+        const subject = encodeURIComponent(`General Sourcing Inquiry - AgriLinkBurma`);
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${encodedText}`;
+    }
 }
 
 window.onclick = function(event) {
