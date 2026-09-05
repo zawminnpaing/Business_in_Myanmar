@@ -22,7 +22,6 @@
                 <i class="fas fa-leaf text-green"></i> AgriLink<span class="text-navy">Burma</span>
             </a>
             
-            <!-- Added Hamburger Menu Icon -->
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -38,10 +37,11 @@
 
     <!-- B2B Hero Section -->
     <section id="home" class="hero-bg">
-        <div class="hero-overlay">
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 1;">
             <div class="hero-content">
                 <span class="hero-badge">YANGON, MYANMAR</span>
-                <h1>Strategic Sourcing from Myanmar's <span class="text-green-bright">Major Agri-Hubs</span></h1>
+                <h1>Strategic Sourcing from Myanmar's <span class="text-hero-highlight">Major Agri-Hubs</span></h1>
                 <p>We bridge the gap between international buyers and Myanmar's complex wholesale networks. Verified quality, negotiated pricing, and secure FOB/CIF logistics.</p>
                 <div class="hero-btns">
                     <a href="#products" class="btn btn-primary"><i class="fas fa-box-open"></i> View Export Catalog</a>
@@ -102,7 +102,6 @@
                 <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Current availability from our network of processing mills and wholesale hubs. Connect directly for today's market pricing.</p>
             </div>
 
-            <!-- Dynamic Products Injected Here -->
             <div id="dynamic-products" class="product-grid">
                 <div class="loading-spinner" style="grid-column: 1/-1;">
                     <i class="fas fa-circle-notch fa-spin fa-2x"></i>
@@ -110,7 +109,6 @@
                 </div>
             </div>
 
-            <!-- Custom Sourcing Banner -->
             <div class="custom-sourcing-banner shadow-sm">
                 <div class="cs-text">
                     <h3>Looking for something else?</h3>
@@ -118,7 +116,6 @@
                 </div>
                 <button class="btn btn-outline" onclick="openGeneralContactModal()"><i class="fas fa-search"></i> Request Custom Sourcing</button>
             </div>
-
         </div>
     </section>
 
