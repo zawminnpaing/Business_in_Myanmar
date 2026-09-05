@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriLinkBurma | Myanmar Agricultural Sourcing Partner</title>
 
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,6 +15,7 @@
 </head>
 <body>
 
+    <!-- Professional Corporate Navbar -->
     <header class="navbar-wrapper">
         <div class="container nav-container">
             <a href="#home" class="brand-logo">
@@ -28,6 +30,7 @@
         </div>
     </header>
 
+    <!-- B2B Hero Section -->
     <section id="home" class="hero-bg">
         <div class="hero-overlay">
             <div class="hero-content">
@@ -36,12 +39,13 @@
                 <p>We bridge the gap between international buyers and Myanmar's complex wholesale networks. Verified quality, negotiated pricing, and secure FOB/CIF logistics.</p>
                 <div class="hero-btns">
                     <a href="#products" class="btn btn-primary"><i class="fas fa-box-open"></i> View Export Catalog</a>
-                    <button onclick="openGeneralContactModal()" class="btn btn-outline-white"><i class="fas fa-comments"></i> Direct Chat Inquiry</button>
+                    <button onclick="dispatchGeneralMessage('whatsapp')" class="btn btn-outline-white"><i class="fas fa-comments"></i> Direct Chat Inquiry</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- The Hub Strategy (About) -->
     <section id="about" class="section bg-light">
         <div class="container">
             <div class="section-header text-center">
@@ -52,13 +56,13 @@
 
             <div class="about-grid">
                 <div class="about-text">
-                    <p>International commodity trading in Myanmar requires deep local knowledge. <strong>AgriLinkBurma</strong> does not pretend to own the farms; instead, we offer something far more valuable to global buyers: <strong>Access to the Hubs.</strong></p>
-                    <p>We act as your dedicated local representative, connecting you directly with the established tier-1 wholesale suppliers and processing mills in Yangon and major regional centers.</p>
+                    <p>International commodity trading in Myanmar requires deep local knowledge. At <strong>AgriLinkBurma</strong>, our core strength lies in our trusted relationships across the agricultural sector. We offer global buyers something highly valuable: <strong>Direct Access to Myanmar's Premium Hubs.</strong></p>
+                    <p>We act as your dedicated local partner, connecting you seamlessly with established tier-1 wholesale suppliers and processing mills in Yangon and major regional centers.</p>
                     <p><strong>Our Role in Your Supply Chain:</strong></p>
                     <ul class="benefit-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>Market Consolidation:</strong> We source from multiple verified hub-suppliers to fulfill bulk orders quickly.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Quality Verification:</strong> We oversee sorting processes and integrate third-party inspections (SGS/Bureau Veritas) prior to loading.</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Export Logistics:</strong> Handling the complex export documentation, phytosanitary certs, and customs clearance seamlessly.</li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Market Consolidation:</strong> We source from multiple verified hub-suppliers to fulfill bulk orders quickly and efficiently.</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Quality Verification:</strong> We oversee sorting processes and integrate third-party inspections (SGS/Bureau Veritas) prior to loading.</div></li>
+                        <li><i class="fas fa-check-circle"></i> <div><strong>Export Logistics:</strong> Handling the complex export documentation, phytosanitary certs, and customs clearance seamlessly.</div></li>
                     </ul>
                 </div>
                 <div class="about-stats shadow-md">
@@ -82,6 +86,7 @@
         </div>
     </section>  
 
+    <!-- Dynamic Product Grid -->
     <section id="products" class="section">
         <div class="container">
             <div class="section-header text-center">
@@ -91,6 +96,7 @@
                 <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Current availability from our network of processing mills and wholesale hubs. Connect directly for today's market pricing.</p>
             </div>
 
+            <!-- Dynamic Products Injected Here -->
             <div id="dynamic-products" class="product-grid">
                 <div class="loading-spinner" style="grid-column: 1/-1;">
                     <i class="fas fa-circle-notch fa-spin fa-2x"></i>
@@ -100,27 +106,28 @@
         </div>
     </section>
 
+    <!-- Direct Contact CTAs -->
     <section id="contact" class="section bg-navy text-white">
         <div class="container text-center">
-            <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #fff;">Skip the Forms. Talk to a Human.</h2>
-            <p style="max-width: 600px; margin: 0 auto 3rem; color: #cbd5e1; font-size: 1.1rem;">Commodity trading moves fast. Choose your preferred platform below to instantly connect with Zaw Min Paing in Yangon for live pricing, availability, and sourcing requests.</p>
+            <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #fff;">Let's Discuss Your Sourcing Needs</h2>
+            <p style="max-width: 700px; margin: 0 auto 3rem; color: #cbd5e1; font-size: 1.1rem;">We value building strong, long-term partnerships. Choose your preferred platform below to instantly connect with Zaw Min Paing in Yangon for live pricing, product availability, and personalized sourcing requests.</p>
             
             <div class="direct-contact-grid">
-                <a href="https://wa.me/959974500087" target="_blank" class="contact-action-card whatsapp">
+                <a href="javascript:void(0)" onclick="dispatchGeneralMessage('whatsapp')" class="contact-action-card whatsapp">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
                     <p>+95 9 974 500 087</p>
                     <span>Message Now &rarr;</span>
                 </a>
                 
-                <a href="https://t.me/+959793155856" target="_blank" class="contact-action-card telegram">
+                <a href="javascript:void(0)" onclick="dispatchGeneralMessage('telegram')" class="contact-action-card telegram">
                     <i class="fab fa-telegram-plane"></i>
                     <h3>Telegram</h3>
                     <p>+95 9 793 155 856</p>
                     <span>Message Now &rarr;</span>
                 </a>
                 
-                <a href="viber://chat?number=%2B959974500087" target="_blank" class="contact-action-card viber">
+                <a href="javascript:void(0)" onclick="dispatchGeneralMessage('viber')" class="contact-action-card viber">
                     <i class="fab fa-viber"></i>
                     <h3>Viber</h3>
                     <p>+95 9 974 500 087</p>
@@ -130,6 +137,7 @@
         </div>
     </section>
 
+    <!-- Corporate Footer -->
     <footer class="corporate-footer">
         <div class="container">
             <div class="footer-top">
@@ -149,10 +157,10 @@
                 <div class="footer-social">
                     <h3>Connect Instantly</h3>
                     <div class="social-icons">
-                        <a href="https://wa.me/959974500087" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://t.me/+959793155856" target="_blank" class="tg"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="viber://chat?number=%2B959974500087" target="_blank" class="vb"><i class="fab fa-viber"></i></a>
-                        <a href="mailto:zawminn.p@gmail.com" class="em"><i class="fas fa-envelope"></i></a>
+                        <a href="javascript:void(0)" onclick="dispatchGeneralMessage('whatsapp')" class="wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="javascript:void(0)" onclick="dispatchGeneralMessage('telegram')" class="tg"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="javascript:void(0)" onclick="dispatchGeneralMessage('viber')" class="vb"><i class="fab fa-viber"></i></a>
+                        <a href="javascript:void(0)" onclick="dispatchGeneralMessage('email')" class="em"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -162,6 +170,7 @@
         </div>
     </footer>
 
+    <!-- Universal Contact Routing Modal -->
     <div class="modal-overlay" id="inquiry-modal">
         <div class="modal-box">
             <div class="modal-header">
@@ -181,6 +190,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="script.js"></script>
 </body>
