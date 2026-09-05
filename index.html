@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="MyExpoBiz – Myanmar agricultural exporter specializing in rice, pulses and beans. FOB & CIF shipments worldwide.">
-<meta name="keywords" content="Myanmar rice exporter, mung beans export, agricultural export Myanmar">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyExpoBiz | Myanmar Agricultural Exports</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="MyExpoBiz – Your trusted sourcing partner for Myanmar agricultural exports. Specializing in rice, pulses, and beans.">
+    <meta name="keywords" content="Myanmar sourcing agent, Myanmar rice exporter, mung beans export, agricultural export Myanmar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyExpoBiz | Myanmar Agricultural Sourcing Partner</title>
 
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- PapaParse for Google Sheets Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- External CSS & JS -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -19,21 +25,20 @@
   <nav class="glass-nav">
     <a href="#home" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
     <a href="#products" class="nav-item"><i class="fas fa-seedling"></i><span>Products</span></a>
-    <a href="#about" class="nav-item"><i class="fas fa-info-circle"></i><span>About</span></a>
-    <a href="#why" class="nav-item"><i class="fas fa-check-circle"></i><span>Why Us</span></a>
-    <a href="#markets" class="nav-item"><i class="fas fa-globe"></i><span>Markets</span></a>
-    <a href="#contact" class="nav-item"><i class="fas fa-user"></i><span>Contact</span></a>
+    <a href="#about" class="nav-item"><i class="fas fa-handshake"></i><span>Our Approach</span></a>
+    <a href="#why" class="nav-item"><i class="fas fa-shield-alt"></i><span>Why Us</span></a>
+    <a href="#contact" class="nav-item"><i class="fas fa-envelope"></i><span>Contact</span></a>
   </nav>
 </header>
 
 <section id="home" class="hero-bg">
   <div class="hero-overlay">
     <div class="hero-content">
-      <h1>Reliable Agricultural Exports From Myanmar</h1>
-      <p>FOB & CIF • Flexible MOQ • Quality-Controlled Shipments</p>
+      <h1>Your Trusted Sourcing Partner in Myanmar</h1>
+      <p>Bridging the gap between global buyers and local agricultural suppliers. Quality verified, prices negotiated, and shipments secured.</p>
       <div class="hero-btns">
-        <a href="#products" class="btn btn-primary">View Products</a>
-        <a href="https://t.me/Zawm96" class="btn btn-outline-white">Live Chat</a>
+        <a href="#products" class="btn btn-primary">Browse Commodities</a>
+        <a href="#contact" class="btn btn-outline-white">Send Sourcing Request</a>
       </div>
     </div>
   </div>
@@ -41,248 +46,106 @@
 
 <section id="products" class="section">
   <div class="container">
-    <h2 class="section-title text-center">Our Export Portfolio</h2>
+    <h2 class="section-title text-center">Available Commodities</h2>
     <div class="underline"></div>
+    <p class="text-center" style="margin-bottom: 50px; max-width: 600px; margin-inline: auto;">
+      Sourced directly from local farmers and processing mills. Our inventory updates regularly based on harvest seasons and market availability.
+    </p>
 
-    <div class="zigzag-container">
-
-      <article class="product-row reveal-left">
-        <div class="product-img">
-          <img src="images/black_gram.jpg" alt="Myanmar Black Gram (Matpe)" loading="lazy">
+    <!-- Dynamic Products will be injected here by JS -->
+    <div id="dynamic-products" class="zigzag-container">
+        <div class="loading-spinner">
+            <i class="fas fa-circle-notch fa-spin fa-2x"></i>
+            <p style="margin-top: 10px;">Syncing latest products from database...</p>
         </div>
-        <div class="product-text">
-          <h3>Black Gram (Matpe)</h3>
-          <p class="product-description"><strong>The Golden Standard:</strong> World-renowned for superior density and firm texture. Grown in mineral-rich deltas, it is the premier choice for high-quality dal, packed with ~24% protein, Iron, and Zinc.</p>
-          <ul class="specs">
-            <li><strong>Grade:</strong> SQ / FAQ</li>
-            <li><strong>Admixture:</strong> ≤1%</li>
-            <li><strong>Moisture:</strong> ≤14%</li>
-            <li><strong>Packing:</strong> 50kg PP Bags</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Black Gram">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reverse reveal-right">
-        <div class="product-img">
-          <img src="images/green_gram.jpg" alt="Myanmar Green Gram (Mung)" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Green Gram (Mung)</h3>
-          <p class="product-description"><strong>Sun-Kissed & Pure:</strong> Harvested from sunny central dry zones, these thin-skinned beans are prized for exceptional sproutability and a naturally sweet flavor favored by EU health markets.</p>
-          <ul class="specs">
-            <li><strong>Size:</strong> 3.25mm+</li>
-            <li><strong>Admixture:</strong> ≤0.5%</li>
-            <li><strong>Moisture:</strong> ≤13.5%</li>
-            <li><strong>Packing:</strong> 25kg / 50kg</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Green Gram">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reveal-left">
-        <div class="product-img">
-          <img src="images/pigeon_pea.jpg" alt="Myanmar Pigeon Pea" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Pigeon Pea (Tur)</h3>
-          <p class="product-description"><strong>Drought-Resilient Quality:</strong> Grown in the rugged terrain of Upper Myanmar, these peas offer a deep, earthy flavor and long shelf life without losing their high Potassium and fiber content.</p>
-          <ul class="specs">
-            <li><strong>Damaged:</strong> ≤2%</li>
-            <li><strong>Foreign Matter:</strong> ≤1%</li>
-            <li><strong>Moisture:</strong> ≤12%</li>
-            <li><strong>Packing:</strong> 50kg PP Bags</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Pigeon Pea">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reverse reveal-right">
-        <div class="product-img">
-          <img src="images/chickpea.jpg" alt="Myanmar Chickpeas" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Chickpeas (Kabuli/Desi)</h3>
-          <p class="product-description"><strong>The Creamy Gourmet:</strong> Famous for a "melt-in-mouth" texture after roasting. A perfect balance of sweetness and nuttiness, rich in Manganese for natural energy.</p>
-          <ul class="specs">
-            <li><strong>Type:</strong> 9mm+ (Kabuli) / 5mm+ (Desi)</li>
-            <li><strong>Splits:</strong> ≤2%</li>
-            <li><strong>Moisture:</strong> ≤10%</li>
-            <li><strong>Packing:</strong> 25kg / 50kg</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Chickpeas">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reveal-left">
-        <div class="product-img">
-          <img src="images/garden_pea.jpg" alt="Myanmar Garden Peas" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Garden Peas (Sataw-pe)</h3>
-          <p class="product-description"><strong>The Snack Master:</strong> Selected for uniform size and skin integrity. These provide a satisfying crunch for snacks and a rich consistency for traditional soups and purees.</p>
-          <ul class="specs">
-            <li><strong>Foreign Matter:</strong> ≤1%</li>
-            <li><strong>Broken:</strong> ≤3%</li>
-            <li><strong>Moisture:</strong> ≤14%</li>
-            <li><strong>Packing:</strong> 50kg PP Bags</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Garden Peas">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reverse reveal-right">
-        <div class="product-img">
-          <img src="images/kidney_beans.jpg" alt="Myanmar Kidney Beans" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Kidney Beans (Rajma)</h3>
-          <p class="product-description"><strong>Visual & Culinary Excellence:</strong> Hand-sorted for deep, consistent colors. Preferred by chefs for their ability to absorb flavors while maintaining a beautiful aesthetic in gourmet dishes.</p>
-          <ul class="specs">
-            <li><strong>Weevilled:</strong> ≤3%</li>
-            <li><strong>Admixture:</strong> ≤1%</li>
-            <li><strong>Moisture:</strong> ≤14%</li>
-            <li><strong>Packing:</strong> 50kg PP Bags</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Kidney Beans">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reveal-left">
-        <div class="product-img">
-          <img src="images/soybean.jpg" alt="Myanmar Soybean" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Soybean (Non-GMO)</h3>
-          <p class="product-description"><strong>Ethically Grown:</strong> 100% Non-GMO soybeans from the Shan highlands. Higher lipid content makes them ideal for premium tofu and natural oil extraction.</p>
-          <ul class="specs">
-            <li><strong>Purity:</strong> ≥98%</li>
-            <li><strong>Foreign Matter:</strong> ≤2%</li>
-            <li><strong>Moisture:</strong> ≤12%</li>
-            <li><strong>Packing:</strong> 50kg PP Bags</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Soybean">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reverse reveal-right">
-        <div class="product-img">
-          <img src="images/maize.jpg" alt="Myanmar Yellow Maize" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Yellow Maize (Corn)</h3>
-          <p class="product-description"><strong>The Energy Engine:</strong> Harvested with strict moisture control to ensure low aflatoxin levels. The high-starch foundation for the region's top poultry and livestock industries.</p>
-          <ul class="specs">
-            <li><strong>Aflatoxin:</strong> ≤20-50 ppb</li>
-            <li><strong>Admixture:</strong> ≤1%</li>
-            <li><strong>Moisture:</strong> ≤14%</li>
-            <li><strong>Packing:</strong> 50kg PP Bags</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Maize">Request Quote</button>
-        </div>
-      </article>
-
-      <article class="product-row reveal-left">
-        <div class="product-img">
-          <img src="images/rice.jpg" alt="Myanmar Rice" loading="lazy">
-        </div>
-        <div class="product-text">
-          <h3>Premium Rice (Pawsan/Emata)</h3>
-          <p class="product-description"><strong>A Legacy of Flavor:</strong> Featuring the award-winning fragrance of Pawsan and the versatile long-grain Emata. Clean, bright, and aged to perfection for global staples.</p>
-          <ul class="specs">
-            <li><strong>Broken:</strong> 5% / 25% (By Grade)</li>
-            <li><strong>Chalky Kernel:</strong> ≤5%</li>
-            <li><strong>Moisture:</strong> ≤14%</li>
-            <li><strong>Packing:</strong> 25kg / 50kg</li>
-            <li><strong>MOQ:</strong> 1 x 20FT</li>
-          </ul>
-          <button class="btn btn-primary quote-btn" data-product="Premium Rice">Request Quote</button>
-        </div>
-      </article>
-
     </div>
+
   </div>
 </section>
   
 <section id="about" class="section bg-light">
   <div class="container text-center">
-    <h2 class="section-title">About Us</h2>
+    <h2 class="section-title">The "Boots on the Ground" Advantage</h2>
     <div class="underline"></div>
 
     <div class="about-content">
       <p>
-        At <strong>MyExpoBiz</strong>, we connect buyers with Myanmar’s finest agricultural produce through a strong, trusted sourcing network built over 
-        <strong>more than 10 years of hands-on trading experience</strong> in the local market.
+        International agricultural trade is complex. Navigating foreign markets, ensuring quality control, and avoiding scams are massive challenges for overseas buyers. That is where <strong>MyExpoBiz</strong> comes in.
       </p>
 
       <p>
-        We actively procure pulses, beans, maize, and rice from across Myanmar—working with a wide base of regional suppliers who source directly from farmers—and supply to major buyers, processors, and wholesalers in Yangon and other key trading hubs. This deep-rooted local presence allows us to secure consistent quality, competitive pricing, and reliable volumes throughout the year.
+        I am not a massive, faceless corporation. I am your dedicated <strong>local sourcing agent</strong>. With deep-rooted connections to farmers, millers, and port authorities across Myanmar, I act as your eyes and ears on the ground.
       </p>
 
       <p>
-        At the same time, we support buyers in both local and international markets through professional logistics and documentation partners, ensuring smooth delivery, compliant documentation, and timely shipments according to agreed terms. Our team manages the full sourcing and fulfillment process, from origin procurement to final dispatch.
+        <strong>How I resolve the gap:</strong><br>
+        1. <strong>Price Negotiation:</strong> I bypass the major trading houses to source directly from regional suppliers, securing highly competitive FOB/CIF pricing for you.<br>
+        2. <strong>Quality Assurance:</strong> I personally oversee quality parameters (moisture, admixture) and work closely with international surveyors like <em>SGS</em> and <em>Bureau Veritas</em> before any container is sealed.<br>
+        3. <strong>Logistics & Docs:</strong> I handle the complex local export bureaucracy, Phytosanitary certificates, and customs clearance so you receive a seamless shipment.
       </p>
 
       <p>
-        Our operations are flexible and buyer-oriented. We arrange product processing according to customer requirements—such as cleaning, grading, sizing, packing, and moisture control—before delivery. With access to hundreds of suppliers from rural producing areas, we have the capacity to source large volumes within tight timelines and fulfill orders before agreed delivery dates.
-      </p>
-
-      <p>
-        Whether you are a domestic wholesaler, processor, or an international importer, MyExpoBiz aims to be your reliable sourcing partner in Myanmar—bringing you consistent supply, flexible terms, and responsive service.
+        My goal isn't just to make a sale; it is to protect your investment and build a long-term, risk-free supply chain from Myanmar to your port.
       </p>
     </div>
   </div>
 </section>  
   
-<section id="why" class="section bg-light">
-<div class="container text-center">
-<h2 class="section-title">Why Choose Us</h2>
-<div class="underline"></div>
-<p class="about-desc">
-✔ FOB & CIF shipments<br>
-✔ Flexible MOQ for new buyers<br>
-✔ Pre-shipment quality inspection<br>
-✔ Transparent pricing & documentation
-</p>
-</div>
-</section>
-
-<section id="markets" class="section">
-<div class="container text-center">
-<h2 class="section-title">Markets We Serve</h2>
-<div class="underline"></div>
-<p>India • China • Middle East • ASEAN • Africa</p>
-</div>
+<section id="why" class="section">
+    <div class="container">
+        <h2 class="section-title text-center">Why Partner With Us?</h2>
+        <div class="underline"></div>
+        
+        <div class="value-grid">
+            <div class="value-card">
+                <i class="fas fa-search-dollar"></i>
+                <h4>Direct Sourcing</h4>
+                <p>No unnecessary middlemen. I connect you directly to the source for optimal market pricing.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-microscope"></i>
+                <h4>Verified Quality</h4>
+                <p>We welcome third-party inspections (SGS/BV) prior to loading for your total peace of mind.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-file-signature"></i>
+                <h4>Transparent Process</h4>
+                <p>Clear communication, accurate documentation, and real-time updates from harvest to port.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-ship"></i>
+                <h4>Flexible Terms</h4>
+                <p>Offering both FOB Yangon and CIF destination pricing with flexible MOQs for new buyers testing the market.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="contact" class="section bg-light">
 <div class="container">
-<div class="contact-card">
-<h2 class="section-title text-center">Contact Us</h2>
-<div class="underline"></div>
+    <div class="contact-card">
+        <h2 class="section-title text-center">Request a Quote / Sourcing Inquiry</h2>
+        <div class="underline"></div>
+        <p class="text-center" style="margin-bottom: 30px;">Fill out your requirements below. The form will generate a message you can send directly to my personal WhatsApp or Email for an immediate response.</p>
 
-<form id="quoteForm">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<textarea name="message" placeholder="Product, quantity & destination" required></textarea>
-<button type="submit" class="btn btn-primary">Send Inquiry</button>
-</form>
+        <form id="quoteForm">
+            <input type="text" id="buyerName" placeholder="Your Name / Company" required>
+            <input type="text" id="buyerCountry" placeholder="Destination Country / Port" required>
+            <textarea id="buyerMessage" placeholder="Please specify the product, required specifications, target quantity, and target price (if any)..." required></textarea>
+            
+            <div class="form-routing-btns">
+                <button type="button" class="btn btn-whatsapp" onclick="sendInquiry('whatsapp')"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                <button type="button" class="btn btn-primary" onclick="sendInquiry('email')"><i class="fas fa-envelope"></i> Send via Email</button>
+            </div>
+        </form>
 
-</div>
+    </div>
 </div>
 </section>
 
 <footer>
-<p>© 2026 MyExpoBiz | Myanmar Agricultural Exporter</p>
+    <p><strong>MyExpoBiz</strong> | Your Sourcing Partner in Myanmar</p>
+    <p style="font-size: 0.85rem; margin-top: 10px;">Yangon, Myanmar | Connecting Local Farms to Global Markets</p>
 </footer>
 
 </body>
