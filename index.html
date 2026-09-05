@@ -2,152 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="MyExpoBiz – Your trusted sourcing partner for Myanmar agricultural exports. Specializing in rice, pulses, and beans.">
-    <meta name="keywords" content="Myanmar sourcing agent, Myanmar rice exporter, mung beans export, agricultural export Myanmar">
+    <meta name="description" content="AgriLinkBurma – Connecting global buyers to Myanmar's premier agricultural wholesale hubs. Specializing in pulses, beans, and grains.">
+    <meta name="keywords" content="Myanmar agricultural sourcing, Myanmar pulses exporter, AgriLinkBurma, Myanmar beans wholesale">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyExpoBiz | Myanmar Agricultural Sourcing Partner</title>
+    <title>AgriLinkBurma | Myanmar Agricultural Sourcing Partner</title>
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <!-- Link to External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="navbar-wrapper">
-        <nav class="glass-nav">
-            <a href="#home" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
-            <a href="#products" class="nav-item"><i class="fas fa-seedling"></i><span>Products</span></a>
-            <a href="#about" class="nav-item"><i class="fas fa-handshake"></i><span>Our Approach</span></a>
-            <a href="#why" class="nav-item"><i class="fas fa-shield-alt"></i><span>Why Us</span></a>
-            <a href="#contact" class="nav-item"><i class="fas fa-envelope"></i><span>Contact</span></a>
-        </nav>
+        <div class="container nav-container">
+            <a href="#home" class="brand-logo">
+                <i class="fas fa-leaf text-green"></i> AgriLink<span class="text-navy">Burma</span>
+            </a>
+            <nav class="main-nav">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#about" class="nav-item">How We Source</a>
+                <a href="#products" class="nav-item">Commodities</a>
+                <a href="#contact" class="btn btn-sm-contact"><i class="fas fa-headset"></i> Connect Now</a>
+            </nav>
+        </div>
     </header>
 
     <section id="home" class="hero-bg">
         <div class="hero-overlay">
             <div class="hero-content">
-                <h1>Your Trusted Sourcing Partner in Myanmar</h1>
-                <p>Bridging the gap between global buyers and local agricultural suppliers. Quality verified, prices negotiated, and shipments secured.</p>
+                <span class="hero-badge">YANGON, MYANMAR</span>
+                <h1>Strategic Sourcing from Myanmar's <span class="text-green">Major Agri-Hubs</span></h1>
+                <p>We bridge the gap between international buyers and Myanmar's complex wholesale networks. Verified quality, negotiated pricing, and secure FOB/CIF logistics.</p>
                 <div class="hero-btns">
-                    <a href="#products" class="btn btn-primary">Browse Commodities</a>
-                    <a href="#contact" class="btn btn-outline-white">Send Sourcing Request</a>
+                    <a href="#products" class="btn btn-primary"><i class="fas fa-box-open"></i> View Export Catalog</a>
+                    <button onclick="openGeneralContactModal()" class="btn btn-outline-white"><i class="fas fa-comments"></i> Direct Chat Inquiry</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="products" class="section">
-        <div class="container">
-            <h2 class="section-title text-center">Available Commodities</h2>
-            <div class="underline"></div>
-            <p class="text-center" style="margin-bottom: 50px; max-width: 600px; margin-inline: auto;">
-                Sourced directly from local farmers and processing mills. Our inventory updates regularly based on harvest seasons and market availability.
-            </p>
-
-            <!-- Dynamic Products will be injected here by JS -->
-            <div id="dynamic-products" class="zigzag-container">
-                <div class="loading-spinner">
-                    <i class="fas fa-circle-notch fa-spin fa-2x"></i>
-                    <p style="margin-top: 10px;">Syncing latest products from database...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-      
     <section id="about" class="section bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">The "Boots on the Ground" Advantage</h2>
-            <div class="underline"></div>
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">OUR APPROACH</span>
+                <h2>Navigating the Market for You</h2>
+                <div class="underline"></div>
+            </div>
 
-            <div class="about-content">
-                <p>
-                    International agricultural trade is complex. Navigating foreign markets, ensuring quality control, and avoiding scams are massive challenges for overseas buyers. That is where <strong>MyExpoBiz</strong> comes in.
-                </p>
-
-                <p>
-                    I am not a massive, faceless corporation. I am your dedicated <strong>local sourcing agent</strong>. With deep-rooted connections to farmers, millers, and port authorities across Myanmar, I act as your eyes and ears on the ground.
-                </p>
-
-                <p>
-                    <strong>How I resolve the gap:</strong><br>
-                    1. <strong>Price Negotiation:</strong> I bypass the major trading houses to source directly from regional suppliers, securing highly competitive FOB/CIF pricing for you.<br>
-                    2. <strong>Quality Assurance:</strong> I personally oversee quality parameters (moisture, admixture) and work closely with international surveyors like <em>SGS</em> and <em>Bureau Veritas</em> before any container is sealed.<br>
-                    3. <strong>Logistics & Docs:</strong> I handle the complex local export bureaucracy, Phytosanitary certificates, and customs clearance so you receive a seamless shipment.
-                </p>
-
-                <p>
-                    My goal isn't just to make a sale; it is to protect your investment and build a long-term, risk-free supply chain from Myanmar to your port.
-                </p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>International commodity trading in Myanmar requires deep local knowledge. <strong>AgriLinkBurma</strong> does not pretend to own the farms; instead, we offer something far more valuable to global buyers: <strong>Access to the Hubs.</strong></p>
+                    <p>We act as your dedicated local representative, connecting you directly with the established tier-1 wholesale suppliers and processing mills in Yangon and major regional centers.</p>
+                    <p><strong>Our Role in Your Supply Chain:</strong></p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Market Consolidation:</strong> We source from multiple verified hub-suppliers to fulfill bulk orders quickly.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Quality Verification:</strong> We oversee sorting processes and integrate third-party inspections (SGS/Bureau Veritas) prior to loading.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Export Logistics:</strong> Handling the complex export documentation, phytosanitary certs, and customs clearance seamlessly.</li>
+                    </ul>
+                </div>
+                <div class="about-stats shadow-md">
+                    <div class="stat-box">
+                        <i class="fas fa-globe-asia"></i>
+                        <h3>Global Reach</h3>
+                        <p>Serving India, UAE, China & ASEAN</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Verified Network</h3>
+                        <p>Partnered with Top Regional Hubs</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-ship"></i>
+                        <h3>FOB & CIF</h3>
+                        <p>Flexible Shipping Terms</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>  
-      
-    <section id="why" class="section">
-        <div class="container">
-            <h2 class="section-title text-center">Why Partner With Us?</h2>
-            <div class="underline"></div>
-            
-            <div class="value-grid">
-                <div class="value-card">
-                    <i class="fas fa-search-dollar"></i>
-                    <h4>Direct Sourcing</h4>
-                    <p>No unnecessary middlemen. I connect you directly to the source for optimal market pricing.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-microscope"></i>
-                    <h4>Verified Quality</h4>
-                    <p>We welcome third-party inspections (SGS/BV) prior to loading for your total peace of mind.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-file-signature"></i>
-                    <h4>Transparent Process</h4>
-                    <p>Clear communication, accurate documentation, and real-time updates from harvest to port.</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-ship"></i>
-                    <h4>Flexible Terms</h4>
-                    <p>Offering both FOB Yangon and CIF destination pricing with flexible MOQs for new buyers testing the market.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact" class="section bg-light">
+    <section id="products" class="section">
         <div class="container">
-            <div class="contact-card">
-                <h2 class="section-title text-center">Request a Quote / Sourcing Inquiry</h2>
+            <div class="section-header text-center">
+                <span class="section-tag">EXPORT CATALOG</span>
+                <h2>Available Commodities</h2>
                 <div class="underline"></div>
-                <p class="text-center" style="margin-bottom: 30px;">Fill out your requirements below. The form will generate a message you can send directly to my personal accounts for an immediate response.</p>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Current availability from our network of processing mills and wholesale hubs. Connect directly for today's market pricing.</p>
+            </div>
 
-                <form id="quoteForm">
-                    <input type="text" id="buyerName" placeholder="Your Name / Company" required>
-                    <input type="text" id="buyerCountry" placeholder="Destination Country / Port" required>
-                    <textarea id="buyerMessage" placeholder="Please specify the product, required specifications, target quantity, and target price (if any)..." required></textarea>
-                    
-                    <div class="form-routing-btns">
-                        <button type="button" class="btn btn-whatsapp" onclick="sendInquiry('whatsapp')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
-                        <button type="button" class="btn btn-telegram" onclick="sendInquiry('telegram')"><i class="fab fa-telegram-plane"></i> Telegram</button>
-                        <button type="button" class="btn btn-primary" onclick="sendInquiry('email')"><i class="fas fa-envelope"></i> Email</button>
-                    </div>
-                </form>
+            <div id="dynamic-products" class="product-grid">
+                <div class="loading-spinner" style="grid-column: 1/-1;">
+                    <i class="fas fa-circle-notch fa-spin fa-2x"></i>
+                    <p style="margin-top: 10px;">Loading live database...</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div style="margin-bottom: 15px;">
-            <p><strong><i class="fas fa-phone"></i> +95 9 793 155 856 | +95 9 974 500 087</strong></p>
-            <p><strong><i class="fas fa-envelope"></i> zawminn.p@gmail.com</strong></p>
+    <section id="contact" class="section bg-navy text-white">
+        <div class="container text-center">
+            <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #fff;">Skip the Forms. Talk to a Human.</h2>
+            <p style="max-width: 600px; margin: 0 auto 3rem; color: #cbd5e1; font-size: 1.1rem;">Commodity trading moves fast. Choose your preferred platform below to instantly connect with Zaw Min Paing in Yangon for live pricing, availability, and sourcing requests.</p>
+            
+            <div class="direct-contact-grid">
+                <a href="https://wa.me/959974500087" target="_blank" class="contact-action-card whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+95 9 974 500 087</p>
+                    <span>Message Now &rarr;</span>
+                </a>
+                
+                <a href="https://t.me/+959793155856" target="_blank" class="contact-action-card telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                    <h3>Telegram</h3>
+                    <p>+95 9 793 155 856</p>
+                    <span>Message Now &rarr;</span>
+                </a>
+                
+                <a href="viber://chat?number=%2B959974500087" target="_blank" class="contact-action-card viber">
+                    <i class="fab fa-viber"></i>
+                    <h3>Viber</h3>
+                    <p>+95 9 974 500 087</p>
+                    <span>Message Now &rarr;</span>
+                </a>
+            </div>
         </div>
-        <p><strong>MyExpoBiz</strong> | Your Sourcing Partner in Myanmar</p>
-        <p style="font-size: 0.85rem; margin-top: 5px;">Yangon, Myanmar | Connecting Local Farms to Global Markets</p>
+    </section>
+
+    <footer class="corporate-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2><i class="fas fa-leaf text-green"></i> AgriLinkBurma</h2>
+                    <p>Your strategic sourcing partner bridging the gap between Myanmar's agricultural hubs and global markets.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Direct Contacts</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +95 9 793 155 856 (TG / Call)</li>
+                        <li><i class="fab fa-whatsapp"></i> +95 9 974 500 087 (WA / Viber)</li>
+                        <li><i class="fas fa-envelope"></i> zawminn.p@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Yangon, Myanmar</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect Instantly</h3>
+                    <div class="social-icons">
+                        <a href="https://wa.me/959974500087" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/+959793155856" target="_blank" class="tg"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="viber://chat?number=%2B959974500087" target="_blank" class="vb"><i class="fab fa-viber"></i></a>
+                        <a href="mailto:zawminn.p@gmail.com" class="em"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AgriLinkBurma. Facilitating Global Trade.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- PapaParse & External JS -->
+    <div class="modal-overlay" id="inquiry-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Select Chat Platform</h3>
+                <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body text-center">
+                <p id="modal-context-text" style="color: var(--text-muted); margin-bottom: 1.5rem;">Connect with Zaw Min Paing directly to discuss this requirement.</p>
+                <div class="modal-btn-col">
+                    <button class="btn btn-modal-wa" onclick="dispatchMessage('whatsapp')"><i class="fab fa-whatsapp"></i> Continue on WhatsApp</button>
+                    <button class="btn btn-modal-tg" onclick="dispatchMessage('telegram')"><i class="fab fa-telegram-plane"></i> Continue on Telegram</button>
+                    <button class="btn btn-modal-vb" onclick="dispatchMessage('viber')"><i class="fab fa-viber"></i> Continue on Viber</button>
+                    <div style="margin: 1rem 0; border-bottom: 1px solid var(--border-color);"></div>
+                    <button class="btn btn-outline" style="width: 100%;" onclick="dispatchMessage('email')"><i class="fas fa-envelope"></i> Send via Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="script.js"></script>
 </body>
