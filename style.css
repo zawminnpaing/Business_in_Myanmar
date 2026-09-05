@@ -73,6 +73,10 @@ body { background: var(--bg-gradient); background-attachment: fixed; color: var(
 .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4); }
 .btn-outline-white { border: 2px solid white; color: white; background: transparent; }
 .btn-outline-white:hover { background: white; color: var(--primary-dark); }
+.btn-whatsapp { background: #25D366; color: white; }
+.btn-whatsapp:hover { background: #128C7E; transform: translateY(-3px); }
+.btn-telegram { background: #0088cc; color: white; }
+.btn-telegram:hover { background: #0077b5; transform: translateY(-3px); }
 
 /* ABOUT SECTION */
 .about-content {
@@ -98,10 +102,8 @@ form { display: flex; flex-direction: column; gap: 20px; }
 form input, form textarea { padding: 15px; border-radius: 10px; border: 1px solid #ddd; font-size: 1rem; outline: none; transition: 0.3s; }
 form input:focus, form textarea:focus { border-color: var(--primary-green); box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
 form textarea { min-height: 150px; resize: vertical; }
-.form-routing-btns { display: flex; gap: 15px; }
-.form-routing-btns .btn { flex: 1; display: flex; justify-content: center; align-items: center; gap: 8px; }
-.btn-whatsapp { background: #25D366; color: white; }
-.btn-whatsapp:hover { background: #128C7E; transform: translateY(-3px); }
+.form-routing-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.form-routing-btns .btn { flex: 1; display: flex; justify-content: center; align-items: center; gap: 8px; min-width: 150px; }
 
 /* SPEC LIST */
 .specs { list-style: none; margin-bottom: 25px; background: rgba(22, 163, 74, 0.05); padding: 15px 20px; border-radius: 10px; border-left: 4px solid var(--primary-green); }
