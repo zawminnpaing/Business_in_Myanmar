@@ -11,142 +11,144 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
-    <!-- PapaParse for Google Sheets Integration -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-
-    <!-- External CSS & JS -->
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 
 <body>
 
-<header class="navbar-wrapper">
-  <nav class="glass-nav">
-    <a href="#home" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="#products" class="nav-item"><i class="fas fa-seedling"></i><span>Products</span></a>
-    <a href="#about" class="nav-item"><i class="fas fa-handshake"></i><span>Our Approach</span></a>
-    <a href="#why" class="nav-item"><i class="fas fa-shield-alt"></i><span>Why Us</span></a>
-    <a href="#contact" class="nav-item"><i class="fas fa-envelope"></i><span>Contact</span></a>
-  </nav>
-</header>
+    <header class="navbar-wrapper">
+        <nav class="glass-nav">
+            <a href="#home" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="#products" class="nav-item"><i class="fas fa-seedling"></i><span>Products</span></a>
+            <a href="#about" class="nav-item"><i class="fas fa-handshake"></i><span>Our Approach</span></a>
+            <a href="#why" class="nav-item"><i class="fas fa-shield-alt"></i><span>Why Us</span></a>
+            <a href="#contact" class="nav-item"><i class="fas fa-envelope"></i><span>Contact</span></a>
+        </nav>
+    </header>
 
-<section id="home" class="hero-bg">
-  <div class="hero-overlay">
-    <div class="hero-content">
-      <h1>Your Trusted Sourcing Partner in Myanmar</h1>
-      <p>Bridging the gap between global buyers and local agricultural suppliers. Quality verified, prices negotiated, and shipments secured.</p>
-      <div class="hero-btns">
-        <a href="#products" class="btn btn-primary">Browse Commodities</a>
-        <a href="#contact" class="btn btn-outline-white">Send Sourcing Request</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="products" class="section">
-  <div class="container">
-    <h2 class="section-title text-center">Available Commodities</h2>
-    <div class="underline"></div>
-    <p class="text-center" style="margin-bottom: 50px; max-width: 600px; margin-inline: auto;">
-      Sourced directly from local farmers and processing mills. Our inventory updates regularly based on harvest seasons and market availability.
-    </p>
-
-    <!-- Dynamic Products will be injected here by JS -->
-    <div id="dynamic-products" class="zigzag-container">
-        <div class="loading-spinner">
-            <i class="fas fa-circle-notch fa-spin fa-2x"></i>
-            <p style="margin-top: 10px;">Syncing latest products from database...</p>
-        </div>
-    </div>
-
-  </div>
-</section>
-  
-<section id="about" class="section bg-light">
-  <div class="container text-center">
-    <h2 class="section-title">The "Boots on the Ground" Advantage</h2>
-    <div class="underline"></div>
-
-    <div class="about-content">
-      <p>
-        International agricultural trade is complex. Navigating foreign markets, ensuring quality control, and avoiding scams are massive challenges for overseas buyers. That is where <strong>MyExpoBiz</strong> comes in.
-      </p>
-
-      <p>
-        I am not a massive, faceless corporation. I am your dedicated <strong>local sourcing agent</strong>. With deep-rooted connections to farmers, millers, and port authorities across Myanmar, I act as your eyes and ears on the ground.
-      </p>
-
-      <p>
-        <strong>How I resolve the gap:</strong><br>
-        1. <strong>Price Negotiation:</strong> I bypass the major trading houses to source directly from regional suppliers, securing highly competitive FOB/CIF pricing for you.<br>
-        2. <strong>Quality Assurance:</strong> I personally oversee quality parameters (moisture, admixture) and work closely with international surveyors like <em>SGS</em> and <em>Bureau Veritas</em> before any container is sealed.<br>
-        3. <strong>Logistics & Docs:</strong> I handle the complex local export bureaucracy, Phytosanitary certificates, and customs clearance so you receive a seamless shipment.
-      </p>
-
-      <p>
-        My goal isn't just to make a sale; it is to protect your investment and build a long-term, risk-free supply chain from Myanmar to your port.
-      </p>
-    </div>
-  </div>
-</section>  
-  
-<section id="why" class="section">
-    <div class="container">
-        <h2 class="section-title text-center">Why Partner With Us?</h2>
-        <div class="underline"></div>
-        
-        <div class="value-grid">
-            <div class="value-card">
-                <i class="fas fa-search-dollar"></i>
-                <h4>Direct Sourcing</h4>
-                <p>No unnecessary middlemen. I connect you directly to the source for optimal market pricing.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-microscope"></i>
-                <h4>Verified Quality</h4>
-                <p>We welcome third-party inspections (SGS/BV) prior to loading for your total peace of mind.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-file-signature"></i>
-                <h4>Transparent Process</h4>
-                <p>Clear communication, accurate documentation, and real-time updates from harvest to port.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-ship"></i>
-                <h4>Flexible Terms</h4>
-                <p>Offering both FOB Yangon and CIF destination pricing with flexible MOQs for new buyers testing the market.</p>
+    <section id="home" class="hero-bg">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Your Trusted Sourcing Partner in Myanmar</h1>
+                <p>Bridging the gap between global buyers and local agricultural suppliers. Quality verified, prices negotiated, and shipments secured.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary">Browse Commodities</a>
+                    <a href="#contact" class="btn btn-outline-white">Send Sourcing Request</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact" class="section bg-light">
-<div class="container">
-    <div class="contact-card">
-        <h2 class="section-title text-center">Request a Quote / Sourcing Inquiry</h2>
-        <div class="underline"></div>
-        <p class="text-center" style="margin-bottom: 30px;">Fill out your requirements below. The form will generate a message you can send directly to my personal WhatsApp or Email for an immediate response.</p>
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Available Commodities</h2>
+            <div class="underline"></div>
+            <p class="text-center" style="margin-bottom: 50px; max-width: 600px; margin-inline: auto;">
+                Sourced directly from local farmers and processing mills. Our inventory updates regularly based on harvest seasons and market availability.
+            </p>
 
-        <form id="quoteForm">
-            <input type="text" id="buyerName" placeholder="Your Name / Company" required>
-            <input type="text" id="buyerCountry" placeholder="Destination Country / Port" required>
-            <textarea id="buyerMessage" placeholder="Please specify the product, required specifications, target quantity, and target price (if any)..." required></textarea>
+            <!-- Dynamic Products will be injected here by JS -->
+            <div id="dynamic-products" class="zigzag-container">
+                <div class="loading-spinner">
+                    <i class="fas fa-circle-notch fa-spin fa-2x"></i>
+                    <p style="margin-top: 10px;">Syncing latest products from database...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+    <section id="about" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">The "Boots on the Ground" Advantage</h2>
+            <div class="underline"></div>
+
+            <div class="about-content">
+                <p>
+                    International agricultural trade is complex. Navigating foreign markets, ensuring quality control, and avoiding scams are massive challenges for overseas buyers. That is where <strong>MyExpoBiz</strong> comes in.
+                </p>
+
+                <p>
+                    I am not a massive, faceless corporation. I am your dedicated <strong>local sourcing agent</strong>. With deep-rooted connections to farmers, millers, and port authorities across Myanmar, I act as your eyes and ears on the ground.
+                </p>
+
+                <p>
+                    <strong>How I resolve the gap:</strong><br>
+                    1. <strong>Price Negotiation:</strong> I bypass the major trading houses to source directly from regional suppliers, securing highly competitive FOB/CIF pricing for you.<br>
+                    2. <strong>Quality Assurance:</strong> I personally oversee quality parameters (moisture, admixture) and work closely with international surveyors like <em>SGS</em> and <em>Bureau Veritas</em> before any container is sealed.<br>
+                    3. <strong>Logistics & Docs:</strong> I handle the complex local export bureaucracy, Phytosanitary certificates, and customs clearance so you receive a seamless shipment.
+                </p>
+
+                <p>
+                    My goal isn't just to make a sale; it is to protect your investment and build a long-term, risk-free supply chain from Myanmar to your port.
+                </p>
+            </div>
+        </div>
+    </section>  
+      
+    <section id="why" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Why Partner With Us?</h2>
+            <div class="underline"></div>
             
-            <div class="form-routing-btns">
-                <button type="button" class="btn btn-whatsapp" onclick="sendInquiry('whatsapp')"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
-                <button type="button" class="btn btn-primary" onclick="sendInquiry('email')"><i class="fas fa-envelope"></i> Send via Email</button>
+            <div class="value-grid">
+                <div class="value-card">
+                    <i class="fas fa-search-dollar"></i>
+                    <h4>Direct Sourcing</h4>
+                    <p>No unnecessary middlemen. I connect you directly to the source for optimal market pricing.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-microscope"></i>
+                    <h4>Verified Quality</h4>
+                    <p>We welcome third-party inspections (SGS/BV) prior to loading for your total peace of mind.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-file-signature"></i>
+                    <h4>Transparent Process</h4>
+                    <p>Clear communication, accurate documentation, and real-time updates from harvest to port.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-ship"></i>
+                    <h4>Flexible Terms</h4>
+                    <p>Offering both FOB Yangon and CIF destination pricing with flexible MOQs for new buyers testing the market.</p>
+                </div>
             </div>
-        </form>
+        </div>
+    </section>
 
-    </div>
-</div>
-</section>
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="section-title text-center">Request a Quote / Sourcing Inquiry</h2>
+                <div class="underline"></div>
+                <p class="text-center" style="margin-bottom: 30px;">Fill out your requirements below. The form will generate a message you can send directly to my personal accounts for an immediate response.</p>
 
-<footer>
-    <p><strong>MyExpoBiz</strong> | Your Sourcing Partner in Myanmar</p>
-    <p style="font-size: 0.85rem; margin-top: 10px;">Yangon, Myanmar | Connecting Local Farms to Global Markets</p>
-</footer>
+                <form id="quoteForm">
+                    <input type="text" id="buyerName" placeholder="Your Name / Company" required>
+                    <input type="text" id="buyerCountry" placeholder="Destination Country / Port" required>
+                    <textarea id="buyerMessage" placeholder="Please specify the product, required specifications, target quantity, and target price (if any)..." required></textarea>
+                    
+                    <div class="form-routing-btns">
+                        <button type="button" class="btn btn-whatsapp" onclick="sendInquiry('whatsapp')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                        <button type="button" class="btn btn-telegram" onclick="sendInquiry('telegram')"><i class="fab fa-telegram-plane"></i> Telegram</button>
+                        <button type="button" class="btn btn-primary" onclick="sendInquiry('email')"><i class="fas fa-envelope"></i> Email</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        <div style="margin-bottom: 15px;">
+            <p><strong><i class="fas fa-phone"></i> +95 9 793 155 856 | +95 9 974 500 087</strong></p>
+            <p><strong><i class="fas fa-envelope"></i> zawminn.p@gmail.com</strong></p>
+        </div>
+        <p><strong>MyExpoBiz</strong> | Your Sourcing Partner in Myanmar</p>
+        <p style="font-size: 0.85rem; margin-top: 5px;">Yangon, Myanmar | Connecting Local Farms to Global Markets</p>
+    </footer>
+
+    <!-- PapaParse & External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
