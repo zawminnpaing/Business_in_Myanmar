@@ -21,11 +21,17 @@
             <a href="#home" class="brand-logo">
                 <i class="fas fa-leaf text-green"></i> AgriLink<span class="text-navy">Burma</span>
             </a>
+            
+            <!-- Added Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav class="main-nav">
-                <a href="#home" class="nav-item">Home</a>
-                <a href="#about" class="nav-item">How We Source</a>
-                <a href="#products" class="nav-item">Commodities</a>
-                <a href="#contact" class="btn btn-sm-contact"><i class="fas fa-headset"></i> Connect Now</a>
+                <a href="#home" class="nav-item" onclick="closeMenu()">Home</a>
+                <a href="#about" class="nav-item" onclick="closeMenu()">How We Source</a>
+                <a href="#products" class="nav-item" onclick="closeMenu()">Commodities</a>
+                <a href="#contact" class="btn btn-sm-contact" onclick="closeMenu()"><i class="fas fa-headset"></i> Connect Now</a>
             </nav>
         </div>
     </header>
@@ -35,7 +41,7 @@
         <div class="hero-overlay">
             <div class="hero-content">
                 <span class="hero-badge">YANGON, MYANMAR</span>
-                <h1>Strategic Sourcing from Myanmar's <span class="text-green">Major Agri-Hubs</span></h1>
+                <h1>Strategic Sourcing from Myanmar's <span class="text-green-bright">Major Agri-Hubs</span></h1>
                 <p>We bridge the gap between international buyers and Myanmar's complex wholesale networks. Verified quality, negotiated pricing, and secure FOB/CIF logistics.</p>
                 <div class="hero-btns">
                     <a href="#products" class="btn btn-primary"><i class="fas fa-box-open"></i> View Export Catalog</a>
@@ -103,6 +109,16 @@
                     <p style="margin-top: 10px;">Loading live database...</p>
                 </div>
             </div>
+
+            <!-- Custom Sourcing Banner -->
+            <div class="custom-sourcing-banner shadow-sm">
+                <div class="cs-text">
+                    <h3>Looking for something else?</h3>
+                    <p>Our sourcing capabilities extend beyond this catalog. We can locate, negotiate, and export other Myanmar agricultural products upon request.</p>
+                </div>
+                <button class="btn btn-outline" onclick="openGeneralContactModal()"><i class="fas fa-search"></i> Request Custom Sourcing</button>
+            </div>
+
         </div>
     </section>
 
