@@ -13,7 +13,7 @@ const CONTACT_EMAIL = "zawminn.p@gmail.com";
 let pendingProductName = "";
 
 // ==========================================
-// INITIALIZATION
+// INITIALIZATION & MOBILE MENU
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     if(GOOGLE_SHEET_CSV_URL && GOOGLE_SHEET_CSV_URL !== "") {
@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// Mobile Hamburger Logic
+function toggleMenu() {
+    document.querySelector('.main-nav').classList.toggle('active');
+}
+function closeMenu() {
+    document.querySelector('.main-nav').classList.remove('active');
+}
 
 // ==========================================
 // BUILD B2B PRODUCT CARDS
@@ -82,8 +90,14 @@ function buildProductsHTML(data) {
 }
 
 // ==========================================
-// DIRECT CHAT MODAL ROUTING LOGIC (For Specific Products)
+// DIRECT CHAT MODAL ROUTING LOGIC
 // ==========================================
+function openGeneralContactModal() {
+    pendingProductName = "Custom Sourcing / General Inquiry";
+    document.getElementById("modal-context-text").innerText = "Connect with Zaw Min Paing directly to discuss custom sourcing requirements and live pricing.";
+    document.getElementById("inquiry-modal").classList.add("show");
+}
+
 function openProductModal(productName) {
     pendingProductName = productName;
     document.getElementById("modal-context-text").innerText = `Connect directly to request live pricing and availability for: ${productName}.`;
@@ -96,14 +110,20 @@ function closeModal() {
 
 function dispatchMessage(platform) {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const message = `Hello Zaw Min Paing, I would like to request a quote and current availability for: ${pendingProductName}.`;
+    
+    let message = "";
+    if(pendingProductName === "Custom Sourcing / General Inquiry") {
+        message = `Hello Zaw Min Paing, I am interested in sourcing agricultural commodities from Myanmar. I would like to discuss capabilities and pricing.`;
+    } else {
+        message = `Hello Zaw Min Paing, I would like to request a quote and current availability for: ${pendingProductName}.`;
+    }
+    
     const encodedText = encodeURIComponent(message);
 
     if (platform === 'whatsapp') {
         window.open(`https://wa.me/${WHATSAPP_VIBER_NUM}?text=${encodedText}`, '_blank');
     } 
     else if (platform === 'telegram') {
-        // Safe cross-platform routing for Telegram
         if (isMobile) window.open(`https://t.me/+${TELEGRAM_NUM}?text=${encodedText}`, '_blank');
         else window.open(`tg://resolve?phone=${TELEGRAM_NUM}&text=${encodedText}`, '_self');
     } 
@@ -119,30 +139,9 @@ function dispatchMessage(platform) {
     closeModal();
 }
 
-// ==========================================
-// GENERAL CHAT ROUTING LOGIC (For Direct Contact CTAs)
-// ==========================================
 function dispatchGeneralMessage(platform) {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const message = "Hello Zaw Min Paing, I am interested in sourcing agricultural commodities from Myanmar. I would like to discuss capabilities and pricing.";
-    const encodedText = encodeURIComponent(message);
-
-    if (platform === 'whatsapp') {
-        window.open(`https://wa.me/${WHATSAPP_VIBER_NUM}?text=${encodedText}`, '_blank');
-    } 
-    else if (platform === 'telegram') {
-        // Safe cross-platform routing for Telegram
-        if (isMobile) window.open(`https://t.me/+${TELEGRAM_NUM}?text=${encodedText}`, '_blank');
-        else window.open(`tg://resolve?phone=${TELEGRAM_NUM}&text=${encodedText}`, '_self');
-    } 
-    else if (platform === 'viber') {
-        if (isMobile) window.open(`viber://chat?number=%2B${WHATSAPP_VIBER_NUM}&draft=${encodedText}`, '_blank');
-        else window.open(`viber://chat?number=%2B${WHATSAPP_VIBER_NUM}&draft=${encodedText}`, '_self');
-    }
-    else if (platform === 'email') {
-        const subject = encodeURIComponent(`General Sourcing Inquiry - AgriLinkBurma`);
-        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${encodedText}`;
-    }
+    pendingProductName = "Custom Sourcing / General Inquiry";
+    dispatchMessage(platform);
 }
 
 window.onclick = function(event) {
