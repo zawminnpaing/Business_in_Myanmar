@@ -21,7 +21,8 @@ html { scroll-behavior: smooth; }
 /* Mathematical fix for fixed navbar overlap */
 body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; padding-top: 74px; }
 
-.container { width: 90%; max-width: 1200px; margin: auto; }
+/* FIXED: Replaced percentage width with robust pixel padding to prevent edge-smashing */
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .section { padding: 80px 0; }
 .text-center { text-align: center; }
 .text-green { color: var(--brand-green); }
@@ -51,7 +52,8 @@ h1, h2, h3, h4 { color: var(--brand-navy); font-weight: 700; line-height: 1.3; }
 
 /* Navbar */
 .navbar-wrapper { background: #fff; box-shadow: var(--shadow-sm); position: fixed; width: 100%; top: 0; z-index: 1000; height: 74px; display: flex; align-items: center; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+/* FIXED: Removed width: 100% to allow .container padding to work correctly */
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
 .brand-logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--brand-navy); }
 .main-nav { display: flex; align-items: center; gap: 20px; }
 .nav-item { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
